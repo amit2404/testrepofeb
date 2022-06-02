@@ -26,11 +26,11 @@ jobs:
           git config user.email "amitbciit.kumar@gmail.com"
       - name: commit
         run: |
-          curl -i -H "Authorization: token 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" \         
-           -d '{ \
-            "name": "Helloworld", \
-            "auto_init": true, \
-           "private": true, \
-           "gitignore_template": "nanoc" \
-          }' \
-          https://api.github.com/user/repos
+          curl -i -H "Authorization: token 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" \
+          -d '{ \
+              "name":"hellog", \
+              "auto_init":true, \
+              "private":false, \
+              "gitignore_template":"nanoc" \
+            }' \
+            https://api.github.com/user/repos
