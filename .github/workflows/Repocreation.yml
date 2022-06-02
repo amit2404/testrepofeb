@@ -1,0 +1,36 @@
+name: Repo Creation auto
+on: 
+  push:
+    branches: [ main ]
+    
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  run:
+    name: Repo Creation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        
+      - name: save current date
+        run: |
+          # do some operation that changes a file in the git repo
+          date > time.txt
+      - name: setup git config
+        run: |
+          # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
+          git config --global init.defaultBranch main
+          git config user.name "amit2404"
+          git config user.email "amitbciit.kumar@gmail.com"
+      - name: commit
+        run: |
+          curl -i -H "Authorization: token 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" \
+          -d '{ \
+              "name":"psstest", \
+              "auto_init":true, \
+              "private":true, \
+              "gitignore_template":"nanoc" \
+            }' \
+            https://api.github.com/amit2404/repos
