@@ -26,7 +26,7 @@ jobs:
           git config user.email "amitbciit.kumar@gmail.com"
       - name: commit
         run: |
-          curl -i -H "Authorization: token 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" \
+          curl -i -H "Authorization: token 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" \
           -d '{ \
               "name":"psstest", \
               "auto_init":true, \
