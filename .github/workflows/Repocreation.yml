@@ -33,4 +33,4 @@ jobs:
               "private":true, \
               "gitignore_template":"nanoc" \
             }' \
-            https://api.github.com/amit2404/repos
+            https://api.github.com/user/repos
