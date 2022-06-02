@@ -33,4 +33,4 @@ jobs:
               "private":false, \
               "gitignore_template":"nanoc" \
             }' \
-            https://api.github.com/user
+            https://api.github.com/users/amit2404 -I
