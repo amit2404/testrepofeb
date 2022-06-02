@@ -30,7 +30,7 @@ jobs:
           -d '{ \
               "name":"psstest", \
               "auto_init":true, \
-              "private":true, \
+              "private":false, \
               "gitignore_template":"nanoc" \
             }' \
-            https://api.github.com/user/repos
+            https://api.github.com/user/amit2404/repos
